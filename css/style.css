@@ -104,8 +104,8 @@ body {
 }
 
 .book-card img {
-  width: 100px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
