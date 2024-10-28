@@ -3,11 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My library</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
 </head>
 <body>
-    <h1>Hello word !</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>Library</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search your favorite books">
+            </div>
+            <div class="profile">
+                <span></span>
+                <span>Belongs</span>
+            </div>
+        </header>
+
+        <div class="content">
+            <aside class="sidebar">
+                <ul>
+                    <li>Discover</li>
+                    <li>Categories</li>
+                    <li>My library</li>
+                    <li>Settings</li>
+                    <li>Logout</li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+                <section class="recommended">
+                    <h2>Recommended</h2>
+                    <div class="book-cards">
+                        <div class="book-card">
+                            <img src="/images/1.png" alt="Book Cover">
+                            <h2>The Psychology of Money</h2>
+                            <p>by Kathian Brands</p>
+                            <p class="price">$31.99</p>
+                            <div class="rating">⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
 </body>
 </html>
