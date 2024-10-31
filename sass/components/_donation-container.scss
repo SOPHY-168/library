@@ -1,0 +1,86 @@
+.donation-container {
+    margin-top: 30px;
+    grid-area: donation-container;
+    width: 75%;
+    margin-left: 10.5%;
+    padding: 20px;
+    // border: 2px solid #007BFF;
+    background-color: #fff;
+    border-radius: 10px;
+
+    h2 {
+        text-align: center;
+        color: #007BFF;
+        margin-bottom: 20px;
+    }
+
+    .donation-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 20px;
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 98%;
+        }
+
+        .donation-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            // justify-content: space-between;
+
+            input[type="radio"] {
+                margin-right: 5px;
+            }
+
+            .other-amount {
+                flex-grow: 1;
+                
+            }
+        }
+
+        .checkbox-options {
+            display: flex;
+            // justify-content: space-between;
+            label {
+                margin-right: 40px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+
+        button {
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .donation-container {
+        width: 90%;
+        margin-left: 5%;
+    }
+}

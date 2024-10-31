@@ -1,0 +1,35 @@
+.side-life{
+    grid-area: side-life;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .link {
+        ul {
+            list-style-type: none;
+
+            li {
+                margin: 20px 0;
+                margin-left: -10px;
+
+                a {
+                    text-decoration: none;
+                    color: #333;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .side-life img {
+        width: 100%;
+    }
+
+}
