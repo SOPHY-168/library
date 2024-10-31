@@ -1,5 +1,6 @@
 main{
     grid-area: main;
+    background-color: white;
     .mission{
         text-align: center;
     }
@@ -20,7 +21,8 @@ main{
         width: 23vw;
         height: 50vh;
         border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        }
        .card:hover {
         background-color: aquamarine;
@@ -64,7 +66,8 @@ main{
             width: 23vw;
             height: 50vh;
             border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+            // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
            }
            .card:hover {
             background-color: aquamarine;
