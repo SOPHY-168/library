@@ -1,6 +1,6 @@
 
 
-@import"./components/variable";
+// @import"./components/variable";
 @import"./components/side-left";
 @import"./components/header";
 @import"./components/about";
@@ -16,6 +16,12 @@ body{
     padding: 0;
     font-family: Arial, sans-serif;
 }
+.about{
+    .story{
+        padding-left: 30px;
+    }
+}
+
 .container{
     display: grid;
     grid-template-columns: 0.5fr 3fr;

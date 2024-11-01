@@ -402,6 +402,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.about .story {
+  padding-left: 30px;
+}
+
 .container {
   display: grid;
   grid-template-columns: 0.5fr 3fr;
