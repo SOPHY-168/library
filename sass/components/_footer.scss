@@ -5,6 +5,7 @@
         color: #fff;  
         padding: 20px 0;
         text-align: center;  
+        margin-top: 15px;
       
         .footer-container {  
           display: grid;  
@@ -63,8 +64,45 @@
             } 
         } 
         }  
-        @media (max-width: 768px) {
-            .footer-container {
-                grid-template-columns: 1fr; 
+        // @media (max-width: 768px) {
+        //     .footer-container {
+        //         grid-template-columns: 1fr; 
+        //     }
+        // }
+        @media (max-width: 1024px) {
+            .about{
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                  "header"
+                  "side-life"
+                  "about"
+                  "main"
+                  "donation-container"
+                "footer";
+            }
+            .header,
+            .side-life,
+            .about,
+            main,
+            .donation-container,
+            .footer {
+              width: 100%;
             }
         }
+        @media (max-width: 768px) {
+            .donation-container{
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                  "header"
+                  "side-life"
+                  "about"
+                  "main"
+                  "donation-container"
+                  "footer";
+        
+        }  
+        .footer-container {
+            grid-template-columns: 1fr; // Stack footer sections vertically on mobile
+          }
+    
+    }

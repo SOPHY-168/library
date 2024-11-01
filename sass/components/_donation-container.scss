@@ -1,5 +1,5 @@
 .donation-container {
-    margin-top: 30px;
+    margin-top: 20px;
     grid-area: donation-container;
     width: 75%;
     margin-left: 10.5%;
@@ -78,9 +78,40 @@
         }
     }
 }
+// @media (max-width: 768px) {
+//     .donation-container {
+//         width: 90%;
+//         margin-left: 5%;
+//     }
+// }
+@media (max-width: 1024px) {
+    .about{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "side-life"
+          "about"
+          "main"
+          "donation-container"
+        "footer";
+    }
+}
+
 @media (max-width: 768px) {
+    .donation-container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "side-life"
+          "about"
+          "main"
+          "donation-container"
+          "footer";
+
+    }
     .donation-container {
         width: 90%;
         margin-left: 5%;
-    }
+      }
 }
+   
