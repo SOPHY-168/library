@@ -1,0 +1,104 @@
+.about{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: 
+    'moon-library photo'
+    'our-story photo';
+    width: 100%;
+    grid-area: about;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    .photo img {
+        width: 100%;
+        // border-radius: 10px;
+    }
+    .moon-library{
+        grid-area: moon-library;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 40px;
+        // background-color: rgb(19, 5, 107);
+
+        margin-bottom: -20px;
+        h1{
+            text-align: left;
+        }
+
+
+    }
+    .our-story{
+        margin-top: -20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 40px;
+        // background-color: red;
+        grid-area: our-story;
+        h1{
+            text-align: left;
+        }
+    }
+    .photo{
+        grid-area: photo;
+        height: 100vh;
+    }
+    // .story{
+    //     margin-top: 30px;
+    //     // margin-left: 20px; 
+    //     width: 30%;
+    //     color: #7d8282;
+    //     padding: 40px;
+    //     text-align: justify;
+    //  }
+     h1{
+        color:#16a085 ;
+    }
+    // .photo{
+    //     // height:100% ;
+    //     width: 60%;
+    //     margin-top: 30px;
+    // }
+}
+
+// tablet 
+// @media (max-width: 1024px) {
+//     .about{
+//         grid-template-rows: 2fr;
+//         grid-template-areas: 
+//         'moon-library'
+//         'photo'
+//         'our-story';
+//         width: 100vw;
+//         padding-left: 25%;
+        
+
+//     }
+//     .moon-library{
+//         h1{
+//             text-align: center;
+//         }
+
+
+//     }
+//     .our-story{
+//         h1{
+//             text-align: center;
+//         }
+//     }
+    
+    
+
+// }
+@media (max-width: 1024px) {
+    .about{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "side-life"
+          "about"
+          "main"
+          "donation-container"
+        "footer";
+    }
+}

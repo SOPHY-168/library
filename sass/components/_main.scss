@@ -1,0 +1,129 @@
+main{
+    grid-area: main;
+    // background-color: white;
+    margin-top: 10px;
+    .mission{
+        text-align: center;
+        margin-top: -15px;
+    }
+
+    h1{
+        color:#16a085 ;
+    }
+    .cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+
+       .card{
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 5px;
+        text-align: center;
+        margin: 10px;
+        background: #fff;
+        width: 23vw;
+        height: 50vh;
+        border-radius: 5px;
+        // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       .card:hover {
+        background-color: aquamarine;
+        transform: scale(1.05);
+        box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
+    }
+       .card img{
+        // margin-top: -15px;
+        // margin-left: -17px;
+        width: 170px; 
+        height: 210px;
+    
+        // width: 100px;
+        // height: 100px;
+       }
+       .h3s{
+        margin-top: -25px;
+       }
+       p{
+        color: #616a6b;
+        text-align: justify;
+        margin-left: 30px;
+        
+
+       }
+       h3{
+        margin-top: -15px;
+       }
+    }
+    .value{
+        text-align: center;
+        margin-top: -15px;
+    }
+    .cardss{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+        .card{
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 5px;
+            margin: 10px;
+            background: #fff;
+            width: 23vw;
+            height: 50vh;
+            border-radius: 5px;
+            // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+           }
+
+           .card:hover {
+            background-color: aquamarine;
+            transform: scale(1.05);
+            box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
+        }
+           p{
+            margin-top: 15px;
+            color: #616a6b ;
+            text-align: justify;
+            padding-left: 50px;
+           }
+           h3{
+            margin-top: -10px;
+           }
+           .h3s{
+            margin-top:50px;
+           }
+    
+    }
+}
+
+// tablet 
+// @media (max-width: 1024px) {
+//     *{
+//         font-size: small;
+//     }
+
+// }
+@media (max-width: 1024px) {
+    .about{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "side-life"
+          "about"
+          "main"
+          "donation-container"
+        "footer";
+    }
+    .header,
+        .side-life,
+        .about,
+        main,
+        .donation-container,
+        .cards, .cardss {
+            flex-direction: column; // Stack cards vertically on smaller screens
+          }
+        
+}
