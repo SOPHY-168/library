@@ -1,7 +1,7 @@
 .content {
     display: flex;
     flex: 1;
-    margin-top: 20px;
+    // margin-top: 20px;
   
     .sidebar {
       width: 200px;
@@ -14,10 +14,14 @@
           padding: 15px 0;
           cursor: pointer;
           font-size: 20px;
-          
-  
-          &:hover {
-            color: $primary-color;
+          list-style-type: none;
+          a{
+            text-decoration: none;
+            margin-left: 20px;
+            color: black;
+            &:hover {
+              border-bottom: 2px solid red;
+            }
           }
         }
       }
@@ -25,8 +29,7 @@
   
     .main-content {
       flex: 2;
-      height: 90vh;
-      overflow-y: scroll;
+      height: auto;
       padding: 20px;
       background-color: $bg-color-header;
       margin: 0 20px;
