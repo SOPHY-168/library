@@ -1,0 +1,24 @@
+
+@import "components/_viriables";
+@import "components/_containers";
+@import "components/_content";
+@import "components/_header";
+@import "components/_footer";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  height:auto;
+  // overflow: hidden;
+}
+
+section {
+  margin-top: 20px;
+}

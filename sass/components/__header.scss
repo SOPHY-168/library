@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    margin-left: 15px;
+    .logo{
+        img{
+            width: 150px;
+            height: 60px;
+        }
+    }
+    .input{
+        display: flex;
+        margin-left: 65px;
+        align-items: center;  
+        background-color: rgba(190, 235, 230, 0.73);  
+        border: 1px solid rgba(190, 235, 230, 0.73);  
+        border-radius: 15px;  
+        padding: 10px ;  
+        width: 50%; 
+        input[type =search]{
+            border: none; 
+            outline: none; 
+            background: none; 
+            font-size: 25px; 
+            width: 100%; 
+            margin-left: 10px;
+        }
+    }
+}
