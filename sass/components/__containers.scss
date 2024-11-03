@@ -1,11 +1,10 @@
-body {  
-    font-family: $font-family;  
-    margin: 0;  
-    padding: 0;  
-    background-color: $secondary-color;  
-}  
-@media (max-width: 1024px) {  
-    body {  
-        padding: 5px;  
-    }  
-} 
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr ;
+    grid-template-areas:"sidebar header " 
+    "sidebar content "
+    "footer footer";
+    gap: 10px;
+  }
+  

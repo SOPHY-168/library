@@ -36,7 +36,7 @@
 
 @media (max-width: 1024px) {
   .side-left {
-    width: 120px;
+    width: 140px;
   }
   .side-left img {
     width: 120px;
@@ -115,7 +115,7 @@
     right: 75%;
   }
   .header input {
-    max-width: 340px;
+    max-width: 280px;
     padding-left: 10%;
   }
 }
