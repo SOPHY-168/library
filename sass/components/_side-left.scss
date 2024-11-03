@@ -1,12 +1,14 @@
 .side-left{
+    position: fixed;
+    z-index: 1000;     
     grid-area: side-left;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    height: 1770px;
     img {
-        width: 80%;
+        width: 180px;
         margin-bottom: 20px;
     }
-
     .link {
         ul {
             list-style-type: none;
@@ -14,6 +16,7 @@
             li {
                 margin: 20px 0;
                 margin-left: -10px;
+                padding: 5px;
 
                 a {
                     text-decoration: none;
@@ -33,41 +36,46 @@
         }
     }
 }
-// @media (max-width: 768px) {
-//     .side-life img {
-//         width: 100%;
-//     }
-
-// }
 @media (max-width: 1024px) {
-    .about{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "header"
-          "side-life"
-          "about"
-          "main"
-          "donation-container"
-        "footer";
+    .side-left{
+        width: 120px;
+        img {
+            width: 120px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .link {
+            ul {
+                li{
+                    margin-left: -30px;
+                    font-size: 12px;
+                }
+            }
+        }
     }
 }
-
-@media (max-width: 768px) {
-    .header{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "header"
-          "side-life"
-          "about"
-          "main"
-          "donation-container"
-          "footer";
-
-    }
-    .side-life {
+@media (max-width: 600px) {
+    .side-left{
+        width: 80px;
+        background-color: #ffffff00;
         img {
-          width: 100%; 
+            width: 80px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
-      }
+        .link {
+            ul {
+                li{
+                    a{
+                        font-size: 8px;
+                    }
+                    margin-left: -40px;
+                    font-size: 10px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    
   
 }

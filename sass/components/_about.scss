@@ -1,16 +1,16 @@
 .about{
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2.4fr 3fr;
     grid-template-areas: 
     'moon-library photo'
     'our-story photo';
     width: 100%;
     grid-area: about;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    box-shadow: #00000026 2.4px 2.4px 3.2px;
     .photo img {
         width: 100%;
-        // border-radius: 10px;
+        height: 100%;
     }
     .moon-library{
         grid-area: moon-library;
@@ -18,87 +18,119 @@
         flex-direction: column;
         justify-content: center;
         padding: 20px 40px;
-        // background-color: rgb(19, 5, 107);
-
         margin-bottom: -20px;
         h1{
+            font-size: 48px;
+            margin-top: -5%;
             text-align: left;
         }
-
-
+        h4{
+            margin-top: -15px;
+            font-weight: 100;
+        }
     }
     .our-story{
-        margin-top: -20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 20px 40px;
-        // background-color: red;
         grid-area: our-story;
         h1{
+            font-size: 48px;
+
+            margin-top: -100px;
             text-align: left;
+        }
+        h4{
+            margin-top: -15px;
+            font-weight: 100;
         }
     }
     .photo{
         grid-area: photo;
         height: 100vh;
     }
-    // .story{
-    //     margin-top: 30px;
-    //     // margin-left: 20px; 
-    //     width: 30%;
-    //     color: #7d8282;
-    //     padding: 40px;
-    //     text-align: justify;
-    //  }
+    
      h1{
         color:#16a085 ;
     }
-    // .photo{
-    //     // height:100% ;
-    //     width: 60%;
-    //     margin-top: 30px;
-    // }
 }
-
-// tablet 
-// @media (max-width: 1024px) {
-//     .about{
-//         grid-template-rows: 2fr;
-//         grid-template-areas: 
-//         'moon-library'
-//         'photo'
-//         'our-story';
-//         width: 100vw;
-//         padding-left: 25%;
-        
-
-//     }
-//     .moon-library{
-//         h1{
-//             text-align: center;
-//         }
-
-
-//     }
-//     .our-story{
-//         h1{
-//             text-align: center;
-//         }
-//     }
-    
-    
-
-// }
 @media (max-width: 1024px) {
     .about{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "header"
-          "side-life"
-          "about"
-          "main"
-          "donation-container"
-        "footer";
+        grid-template-areas: 
+        'moon-library'
+        'photo'
+        'our-story';
+        .moon-library{
+            padding: 0;
+            margin-top: 30px;
+            margin-left: 22%;
+            width: 100%;
+            grid-area: moon-library;
+            text-align: justify;
+            h1{
+                font-size: 48px;
+                margin-top: 0px;
+                text-align: center;
+            }
+            h4{
+                margin-top: -15px;
+                text-align: justify;
+            }
+        }
+        .our-story{
+            padding: 0;
+            margin-bottom: 20px;
+            width: 100%;
+            margin-left: 22%;
+            grid-area: our-story;
+            h1{
+                font-size: 48px;
+                margin-top: 0px;
+                text-align: center;
+            }
+            h4{
+                margin-top: -15px;
+                text-align: justify;
+            }
+        }
+        .photo{
+            width: 100%;
+            margin-left: 22%;
+            grid-area: photo;
+            width: 500px;
+            height: 500px;
+        }
     }
+}
+@media (max-width: 600px) {
+    
+    .about{
+        .moon-library{
+            padding: 0;
+            width: 100%;
+            text-align: justify;
+            h1{
+                font-size: 32px;
+            }
+            h4{
+                font-weight: 300;
+            }
+        }
+        .our-story{
+            padding: 0;
+            grid-area: our-story;
+            h1{
+                font-size: 32px;
+            }
+            h4{
+                font-weight: 300;
+            }
+        }
+        .photo{
+            width: 300px;
+            height: 300px;
+        }
+    }
+   
 }

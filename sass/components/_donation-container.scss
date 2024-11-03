@@ -1,19 +1,17 @@
 .donation-container {
     margin-top: 20px;
     grid-area: donation-container;
-    width: 75%;
-    margin-left: 10.5%;
+    margin-left:22%;
+    margin-right: 3%;
+    box-shadow: #00000026 2.4px 2.4px 3.2px;
     padding: 20px;
-    // border: 2px solid #007BFF;
     background-color: #fff;
     border-radius: 10px;
-
-    h2 {
+    h1 {
         text-align: center;
-        color: #007BFF;
+        color: #16a085;
         margin-bottom: 20px;
     }
-
     .donation-form {
         display: flex;
         flex-direction: column;
@@ -39,21 +37,15 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            // justify-content: space-between;
-
             input[type="radio"] {
                 margin-right: 5px;
             }
-
             .other-amount {
                 flex-grow: 1;
-                
             }
         }
-
         .checkbox-options {
             display: flex;
-            // justify-content: space-between;
             label {
                 margin-right: 40px;
                 display: flex;
@@ -78,40 +70,38 @@
         }
     }
 }
-// @media (max-width: 768px) {
-//     .donation-container {
-//         width: 90%;
-//         margin-left: 5%;
-//     }
-// }
 @media (max-width: 1024px) {
-    .about{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "header"
-          "side-life"
-          "about"
-          "main"
-          "donation-container"
-        "footer";
+   
+    .donation-container {
+        margin-right: 11%;
+        margin-left: 29.5%;
+    
+        .donation-form {
+    
+            input[type="text"],
+            input[type="email"],
+            input[type="number"] {
+                width: 96%;
+            }
+        }
     }
 }
-
-@media (max-width: 768px) {
-    .donation-container{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "header"
-          "side-life"
-          "about"
-          "main"
-          "donation-container"
-          "footer";
-
-    }
+@media (max-width: 600px) {
+    
     .donation-container {
-        width: 90%;
-        margin-left: 5%;
-      }
+        margin-right: 10.5%;
+        margin-left: 28.5%;
+    
+        .donation-form {
+            font-size: 10px;
+    
+            input[type="text"],
+            input[type="email"],
+            input[type="number"] {
+                width: 96%;
+                font-size: 10px;
+            }
+        }
+    }
 }
    
