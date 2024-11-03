@@ -169,7 +169,7 @@ main .hero p {
 }
 main .hero button {
   padding: 10px;
-  background-color: #1abc9c;
+  background-color: #269B8E;
   border: none;
   border-radius: 5px;
 }
@@ -181,7 +181,7 @@ main .hero button a:hover {
   text-decoration: underline;
 }
 main .hero button:hover {
-  background-color: rgba(7, 215, 167, 0.9725490196);
+  background-color: #269B8E;
 }
 main img {
   width: 70%;
@@ -663,4 +663,4 @@ main .contact-container .grid .grid-item form button:hover {
   .footer-container .contact {
     grid-area: contact;
   }
-}/*# sourceMappingURL=home.css.map */
+}

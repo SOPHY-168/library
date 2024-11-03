@@ -1,6 +1,6 @@
  .header{
     grid-area: header;
-    background-color: rgb(255, 255, 255);
+    background-color:$primary-color;
     padding: 20px;
     .fa-solid{
         position: absolute;
@@ -9,7 +9,7 @@
         color: gray;
     }
     .input:hover {
-        background-color: aquamarine;
+        background-color: $section-color;
         transform: scale(1.05);
         box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
     }
@@ -22,8 +22,8 @@
         font-size: 16px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        background-color:#d5f5e3;
-        border: 1 px solid #d5f5e3;
+        background-color: $search-color;
+        border: 1 px solid  $primary-color;
     }
 }
 @media (max-width: 1024px) {
@@ -50,6 +50,7 @@
 }
 @media (max-width: 600px) {
     .header{
+        
         
         .fa-solid{
             right: 75%;

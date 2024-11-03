@@ -8,7 +8,7 @@ main{
         text-align: center;
         margin-top: -15px;
         h1{
-            color:#16a085 ;
+            color: $section-color ;
             margin: 50px -130px; 
         }
     }
@@ -23,14 +23,14 @@ main{
         padding: 5px;
         text-align: center;
         margin: 10px;
-        background: #fff;
+        background: $primary-color;
         width: 23vw;
         height: 50vh;
         border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        }
        .card:hover {
-        background-color: aquamarine;
+        background-color: #00fff2db;
         transform: scale(1.05);
         box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
     }
@@ -39,7 +39,7 @@ main{
         height: 170px;
        }
        p{
-        color: #616a6b;
+        color: #646464;
         text-align: justify;
         padding: 0px 20px;
        }
@@ -52,7 +52,7 @@ main{
         margin-top: -15px;
         h1{
             margin: 50px 0px;
-            color:#16a085 ;
+            color: $section-color ;
         }
     }
     .cardss{
@@ -65,14 +65,14 @@ main{
             text-align: center;
             padding: 5px;
             margin: 10px;
-            background: #fff;
+            background: $primary-color;
             width: 23vw;
             height: 50vh;
             border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
            }
            .card:hover {
-            background-color: aquamarine;
+            background-color:  #00fff2db;
             transform: scale(1.05);
             box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
             }
@@ -82,7 +82,7 @@ main{
             }
            p{
             margin-top: 15px;
-            color: #616a6b ;
+            color: #565353;
             text-align: justify;
             padding:0px 20px;
            }

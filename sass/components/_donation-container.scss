@@ -5,11 +5,11 @@
     margin-right: 3%;
     box-shadow: #00000026 2.4px 2.4px 3.2px;
     padding: 20px;
-    background-color: #fff;
+    background-color: $primary-color;
     border-radius: 10px;
     h1 {
         text-align: center;
-        color: #16a085;
+        color: $section-color;
         margin-bottom: 20px;
     }
     .donation-form {
@@ -57,7 +57,7 @@
         button {
             padding: 12px;
             background-color: #007BFF;
-            color: white;
+            color: $primary-color;
             font-size: 16px;
             border: none;
             border-radius: 5px;

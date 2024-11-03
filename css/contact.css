@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 .container {
@@ -20,8 +20,7 @@ body {
 }
 .content .main-content {
   flex: 2;
-  background-color: #f5f5f5;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -42,7 +41,7 @@ body {
 .content .main-content .book-cards .book-card {
   text-align: center;
   cursor: pointer;
-  background-color: #ddebdc;
+  background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   transition: all 0.3s ease;
   flex-wrap: nowrap;
@@ -103,7 +102,7 @@ body {
 }
 .header {
   grid-area: header;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   padding: 20px;
 }
 .header .fa-solid {
@@ -113,7 +112,7 @@ body {
   color: gray;
 }
 .header .input:hover {
-  background-color: aquamarine;
+  background-color: #269B8E;
   transform: scale(1.05);
   box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
 }
@@ -126,8 +125,8 @@ body {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #d5f5e3;
-  border: 1 px solid #d5f5e3;
+  background-color: #e0f7fa;
+  border: 1 px solid #fff;
 }
 
 @media (max-width: 1024px) {
@@ -151,6 +150,74 @@ body {
   .header input {
     max-width: 280px;
     padding-left: 10%;
+  }
+}
+.side-left {
+  position: fixed;
+  z-index: 1000;
+  grid-area: side-left;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  height: 1770px;
+}
+.side-left img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+.side-left .link ul {
+  list-style-type: none;
+}
+.side-left .link ul li {
+  margin: 20px 0;
+  margin-left: -10px;
+  padding: 5px;
+}
+.side-left .link ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.side-left .link a:hover {
+  transform: scale(1.05);
+  width: 130px;
+  border-radius: 5px;
+  -webkit-text-decoration: underline orangered;
+          text-decoration: underline orangered;
+}
+
+@media (max-width: 1024px) {
+  .side-left {
+    width: 140px;
+  }
+  .side-left img {
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .side-left .link ul li {
+    margin-left: -30px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .side-left {
+    width: 80px;
+  }
+  .side-left img {
+    width: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .side-left .link ul li {
+    margin-left: -40px;
+    font-size: 10px;
+    font-size: 10px;
+  }
+  .side-left .link ul li a {
+    font-size: 8px;
   }
 }
 .footer {
@@ -227,72 +294,3 @@ body {
     grid-area: contact;
   }
 }
-.side-left {
-  position: fixed;
-  z-index: 1000;
-  grid-area: side-left;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  height: 1770px;
-}
-.side-left img {
-  width: 180px;
-  margin-bottom: 20px;
-}
-.side-left .link ul {
-  list-style-type: none;
-}
-.side-left .link ul li {
-  margin: 20px 0;
-  margin-left: -10px;
-  padding: 5px;
-}
-.side-left .link ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.side-left .link a:hover {
-  transform: scale(1.05);
-  width: 130px;
-  border-radius: 5px;
-  -webkit-text-decoration: underline orangered;
-          text-decoration: underline orangered;
-}
-
-@media (max-width: 1024px) {
-  .side-left {
-    width: 140px;
-  }
-  .side-left img {
-    width: 120px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .side-left .link ul li {
-    margin-left: -30px;
-    font-size: 12px;
-  }
-}
-@media (max-width: 600px) {
-  .side-left {
-    width: 80px;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  .side-left img {
-    width: 80px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .side-left .link ul li {
-    margin-left: -40px;
-    font-size: 10px;
-    font-size: 10px;
-  }
-  .side-left .link ul li a {
-    font-size: 8px;
-  }
-}/*# sourceMappingURL=contact.css.map */

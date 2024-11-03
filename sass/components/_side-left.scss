@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 1000;     
     grid-area: side-left;
-    background-color: white;
+    background-color: $primary-color;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     height: 1770px;
     img {
@@ -57,7 +57,7 @@
 @media (max-width: 600px) {
     .side-left{
         width: 80px;
-        background-color: #ffffff00;
+        
         img {
             width: 80px;
             margin-top: 20px;

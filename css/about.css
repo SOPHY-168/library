@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 1000;
   grid-area: side-left;
-  background-color: white;
+  background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   height: 1770px;
 }
@@ -51,7 +51,6 @@
 @media (max-width: 600px) {
   .side-left {
     width: 80px;
-    background-color: rgba(255, 255, 255, 0);
   }
   .side-left img {
     width: 80px;
@@ -69,7 +68,7 @@
 }
 .header {
   grid-area: header;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   padding: 20px;
 }
 .header .fa-solid {
@@ -79,7 +78,7 @@
   color: gray;
 }
 .header .input:hover {
-  background-color: aquamarine;
+  background-color: #269B8E;
   transform: scale(1.05);
   box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
 }
@@ -92,8 +91,8 @@
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #d5f5e3;
-  border: 1 px solid #d5f5e3;
+  background-color: #e0f7fa;
+  border: 1 px solid #fff;
 }
 
 @media (max-width: 1024px) {
@@ -257,7 +256,7 @@ main .mission {
   margin-top: -15px;
 }
 main .mission h1 {
-  color: #16a085;
+  color: #269B8E;
   margin: 50px -130px;
 }
 main .cards {
@@ -278,7 +277,7 @@ main .cards .card {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 main .cards .card:hover {
-  background-color: aquamarine;
+  background-color: rgba(0, 255, 242, 0.8588235294);
   transform: scale(1.05);
   box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
 }
@@ -287,7 +286,7 @@ main .cards .card img {
   height: 170px;
 }
 main .cards p {
-  color: #616a6b;
+  color: #646464;
   text-align: justify;
   padding: 0px 20px;
 }
@@ -300,7 +299,7 @@ main .value {
 }
 main .value h1 {
   margin: 50px 0px;
-  color: #16a085;
+  color: #269B8E;
 }
 main .cardss {
   display: flex;
@@ -320,7 +319,7 @@ main .cardss .card {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 main .cardss .card:hover {
-  background-color: aquamarine;
+  background-color: rgba(0, 255, 242, 0.8588235294);
   transform: scale(1.05);
   box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
 }
@@ -330,7 +329,7 @@ main .cardss .card img {
 }
 main .cardss p {
   margin-top: 15px;
-  color: #616a6b;
+  color: #565353;
   text-align: justify;
   padding: 0px 20px;
 }
@@ -469,7 +468,7 @@ main .cardss .h3s {
 }
 .donation-container h1 {
   text-align: center;
-  color: #16a085;
+  color: #269B8E;
   margin-bottom: 20px;
 }
 .donation-container .donation-form {
@@ -514,7 +513,7 @@ main .cardss .h3s {
 .donation-container .donation-form button {
   padding: 12px;
   background-color: #007BFF;
-  color: white;
+  color: #fff;
   font-size: 16px;
   border: none;
   border-radius: 5px;
@@ -641,4 +640,4 @@ body {
   grid-template-columns: 0.5fr 3fr;
   grid-template-areas: "side-left header" "side-left about" "side-left main" "side-left donation-container" "footer footer";
   gap: 10px;
-}/*# sourceMappingURL=about.css.map */
+}

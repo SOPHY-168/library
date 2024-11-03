@@ -3,7 +3,7 @@
     z-index: 1001; 
     grid-area: footer;
     background-color: #333;   
-    color: #fff;  
+    color: $primary-color;  
     padding: 20px 0;
     text-align: center;  
     margin-top: 15px;
@@ -47,7 +47,7 @@
                 }
     
                 a {  
-                    color: #fff; 
+                    color: $primary-color; 
                         text-decoration: none; 
     
                     &:hover {  
