@@ -1,30 +1,28 @@
 main {  
+
     grid-area: main;
 
-    .opening-hours{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .our{
-            margin-top: -150px;
-        }
-    }
+
     .hero {  
         text-align: center;  
-        margin-bottom: 20px;  
+        margin-bottom: 15px;  
         background-color: $primary-color;
 
         h1 {  
-            font-size: 2em; 
+            font-size: 3em; 
             color: $section-color; 
-        }  
-
+        } 
+        p{
+            font-size: 1.5em;
+            color: #555;
+        }   
+        
         button { 
-            margin-top: 15px;  
+            // margin-top: 5px;  
             padding: 10px;  
             background-color: #1abc9c;  
             border: none;  
-            border-radius: 4px;   
+            border-radius: 5px;   
             a{
                 text-decoration: none; 
                 color: $primary-color;                         
@@ -36,10 +34,96 @@ main {
             &:hover {  
                 background-color: #07d7a7f8;
             }
-            
-        
         }  
+    }
+    img{
+        width: 70%;
+        
     } 
+
+    .opening-hours{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .our{
+            margin-top: 0;
+        }
+    }
+    
+    
+    @media (max-width: 1024px) {  
+        .opening-hours {  
+            margin-top: 5px; 
+            display: flex;
+            justify-content: right;
+            align-items: end;
+            .our {
+                font-size: 13px;  
+                margin-top: 10px; 
+                margin-top: -10px;
+            } 
+        }  
+    
+        
+        .image{
+            img{
+                width: 280px;
+                height: 200px;
+                
+            }
+        } 
+    
+        .hero {  
+            h1 {  
+                font-size: 1.5em; 
+            }  
+            p{
+                font-size: 0.8em;
+            }   
+            img{
+                width: 60%;
+            } 
+        }  
+    }
+    @media (max-width: 600px) {  
+        .opening-hours {  
+            margin-top: 5px; 
+            display: flex;
+            justify-content: right;
+            align-items: end;
+            .our {
+                 
+                margin-top: 10px; 
+                margin-top: 10px;
+                h2{
+                    font-size: 8px; 
+                }
+                h4{
+                    font-size: 7px; 
+                }
+                p{
+                    font-size: 6px; 
+                }
+            } 
+        }  
+    
+        
+        .image{
+            img{
+                width: 150px;   
+                height: 100px;         
+            }
+        } 
+    
+        .hero {  
+            h1 {  
+                font-size: 1.5em; 
+            }  
+            img{
+                width: 70%;
+            } 
+        }  
+    }  
     .recommended {  
         background-color: $primary-color;
         padding: 20px;  
@@ -96,6 +180,87 @@ main {
             }  
         }  
     }
+    @media (max-width: 1024px) {  
+        .recommended {  
+            padding: 15px;   
+            
+            h2 {  
+                font-size: 1.5em; 
+            }  
+    
+            .book-list {  
+                justify-content: center; 
+            }  
+    
+            .book {  
+                width: 100%; 
+                max-width: 150px; 
+                margin: 10px 0;   
+            }  
+    
+            .name-book {  
+                width: 100%; 
+                height: auto; 
+            }  
+        }  
+    } 
+    @media (max-width: 600px) {  
+        .recommended {  
+            background-color: $primary-color;
+            padding: 20px;  
+            border-radius: 8px;  
+            
+            h2 {  
+                text-align: center;  
+                color: $section-color;   
+                margin-bottom: 20px;  
+            }  
+        
+            .book-list {  
+                display: flex;  
+                justify-content: space-around; 
+                flex-wrap: wrap;  
+            }  
+        
+            .book {  
+                
+                background-color: #fff;
+                border-radius: 5px;  
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);  
+                margin: 10px;  
+                text-align: center;  
+                width: 150px; 
+        
+                .img-book {  
+                    width: 100%; 
+                    border-top-left-radius: 5px;  
+                    border-top-right-radius: 5px;  
+                    transition: transform 0.3s;
+                }  
+        
+                .name-book {  
+                    padding: 10px;
+                    background-color: $primary-color; 
+                    width: 200px;
+                    height: 20vh;
+                    display: contents;
+                             
+        
+                    h4 {  
+                        font-size: 1.1em; 
+                        color: #34495e; 
+                        margin: 0;  
+                    }  
+        
+                    p {  
+                        font-size: 0.9em;  
+                        color: #7f8c8d;   
+                        margin: 5px 0 0;  
+                    }  
+                }  
+            }    
+        }  
+    } 
     .categories {  
         padding: 20px;  
         background-color: $primary-color;  
@@ -163,6 +328,37 @@ main {
                     }                    
         }  
     } 
+    @media (max-width: 1024px) {  
+        .categories {  
+            padding: 10px; 
+    
+            h2 {  
+                font-size: 1.5em; 
+            }  
+    
+            .category-list {  
+                justify-content: center; 
+                gap: 20px; 
+    
+                .category {  
+                    width: 80%; 
+                    max-width: 250px; 
+                    margin: 10px auto; 
+                    padding: 15px;   
+    
+                    .list {  
+                        width: 100%; 
+                        margin: 0; 
+                    }  
+    
+                    .n-book {  
+                        font-size: 14px;  
+                    }  
+                    
+                }  
+            }  
+        }  
+    }  
 
     section {  
         margin-bottom: 20px;  
@@ -202,16 +398,23 @@ main {
             display: grid;  
             grid-template-columns: repeat(3, 1fr);  
             gap: 20px;  
-        
+            .contact-form{
+                form{
+                    label{
+                        text-align: left;
+                        color: #1f2121f1;
+                    }
+                }
+            }
             .grid-item {  
-                background-color: #ffffff;  
-                padding: 20px;  
+                background-color: $primary-color;  
+                padding: 10px;  
                  border-radius: 8px;  
                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
         
                 h2 {  
                     font-size: 1.5em;  
-                    color: #16a085;  
+                    color: $section-color;  
                 }  
         
                 p {  
@@ -258,6 +461,47 @@ main {
         }  
           
     }  
+    @media (max-width: 1024px) {  
+        section {  
+            padding: 15px;  
+        }  
+    
+        .contact-container {  
+            padding: 15px; 
+            h1 {  
+                font-size: 1.5em;   
+            }  
+    
+            p {  
+                font-size: 0.9em;  
+            }  
+    
+            .grid {  
+                grid-template-columns: 1fr; 
+                gap: 10px; 
+    
+                .grid-item {  
+                    padding: 15px;   
+                    h2 {  
+                        font-size: 1.3em; 
+                    }  
+                }  
+            }  
+        }  
+    } 
+    @media (max-width: 600px) {  
+        main {  
+            section {  
+                padding: 10px; 
+                h1 {  
+                    font-size: 24px; 
+                }  
+                p {  
+                    font-size: 16px;  
+                }  
+            }  
+        }  
+    }   
 } 
 .book-list{
     .rowling:hover{

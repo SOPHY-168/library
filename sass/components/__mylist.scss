@@ -1,0 +1,21 @@
+.mylist{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+
+    grid-template-areas: 'header input'
+    'header main'
+    'footer footer ';
+    gap: 10px;
+    .mylist{
+        grid-area: mylist;
+    }   
+ }
+ @media (max-width: 1024px) {  
+    .mylist {  
+        grid-template-columns: 1fr 10fr; 
+        grid-template-areas:   
+            'header input'  
+            'header main'   
+            'footer footer';  
+    }    
+}  

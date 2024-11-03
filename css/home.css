@@ -5,16 +5,27 @@ body {
   background-color: #f4f4f4;
 }
 
+@media (max-width: 1024px) {
+  body {
+    padding: 5px;
+  }
+}
 .mylist {
   display: grid;
-  grid-template-columns: 7fr, 1fr;
+  grid-template-columns: 1fr, 1fr;
   grid-template-areas: "header input" "header main" "footer footer ";
-  gap: 15px;
+  gap: 10px;
 }
 .mylist .mylist {
   grid-area: mylist;
 }
 
+@media (max-width: 1024px) {
+  .mylist {
+    grid-template-columns: 1fr 10fr;
+    grid-template-areas: "header input" "header main" "footer footer";
+  }
+}
 header {
   background-color: #fff;
   color: black;
@@ -37,7 +48,7 @@ header nav ul li a {
 }
 
 .input {
-  padding: 25px;
+  padding: 15px;
   background-color: #fff;
 }
 .input .div-input {
@@ -45,8 +56,8 @@ header nav ul li a {
   align-items: center;
   background-color: #e0f7fa;
   border: 1px solid #b0bec5;
-  border-radius: 15px;
-  padding: 15px 40px;
+  border-radius: 5px;
+  padding: 10px 30px;
 }
 .input .div-input .icon {
   color: #607d8b;
@@ -57,35 +68,86 @@ header nav ul li a {
   outline: none;
   background: transparent;
   font-size: 25px;
-  width: 100%;
+  width: 50%;
 }
 
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 5px;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .input {
+    padding: 15px;
+  }
+  .input .div-input {
+    padding: 10px 15px;
+  }
+  .input .div-input input[type=search] {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    padding: 10px 5px;
+  }
+  header .logo img {
+    height: 50px;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+  header nav ul .nav-icon li a {
+    font-size: 10px;
+  }
+  .input .div-input {
+    border-radius: 5px;
+    padding: 8px 5px;
+  }
+  .input .div-input .icon {
+    margin-right: 1px;
+  }
+  .input .div-input input[type=search] {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 8px;
+    width: 100%;
+  }
+  main section {
+    padding: 10px;
+  }
+  main section h1 {
+    font-size: 24px;
+  }
+  main section p {
+    font-size: 16px;
+  }
+}
 main {
   grid-area: main;
 }
-main .opening-hours {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main .opening-hours .our {
-  margin-top: -150px;
-}
 main .hero {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   background-color: #fff;
 }
 main .hero h1 {
-  font-size: 2em;
+  font-size: 3em;
   color: #269B8E;
 }
+main .hero p {
+  font-size: 1.5em;
+  color: #555;
+}
 main .hero button {
-  margin-top: 15px;
   padding: 10px;
   background-color: #1abc9c;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 main .hero button a {
   text-decoration: none;
@@ -96,6 +158,74 @@ main .hero button a:hover {
 }
 main .hero button:hover {
   background-color: rgba(7, 215, 167, 0.9725490196);
+}
+main img {
+  width: 70%;
+}
+main .opening-hours {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .opening-hours .our {
+  margin-top: 0;
+}
+@media (max-width: 1024px) {
+  main .opening-hours {
+    margin-top: 5px;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+  }
+  main .opening-hours .our {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-top: -10px;
+  }
+  main .image img {
+    width: 280px;
+    height: 200px;
+  }
+  main .hero h1 {
+    font-size: 1.5em;
+  }
+  main .hero p {
+    font-size: 0.8em;
+  }
+  main .hero img {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  main .opening-hours {
+    margin-top: 5px;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+  }
+  main .opening-hours .our {
+    margin-top: 10px;
+    margin-top: 10px;
+  }
+  main .opening-hours .our h2 {
+    font-size: 8px;
+  }
+  main .opening-hours .our h4 {
+    font-size: 7px;
+  }
+  main .opening-hours .our p {
+    font-size: 6px;
+  }
+  main .image img {
+    width: 150px;
+    height: 100px;
+  }
+  main .hero h1 {
+    font-size: 1.5em;
+  }
+  main .hero img {
+    width: 70%;
+  }
 }
 main .recommended {
   background-color: #fff;
@@ -143,6 +273,74 @@ main .recommended .book .name-book p {
   font-size: 0.9em;
   color: #7f8c8d;
   margin: 5px 0 0;
+}
+@media (max-width: 1024px) {
+  main .recommended {
+    padding: 15px;
+  }
+  main .recommended h2 {
+    font-size: 1.5em;
+  }
+  main .recommended .book-list {
+    justify-content: center;
+  }
+  main .recommended .book {
+    width: 100%;
+    max-width: 150px;
+    margin: 10px 0;
+  }
+  main .recommended .name-book {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  main .recommended {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  main .recommended h2 {
+    text-align: center;
+    color: #269B8E;
+    margin-bottom: 20px;
+  }
+  main .recommended .book-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  main .recommended .book {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center;
+    width: 150px;
+  }
+  main .recommended .book .img-book {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: transform 0.3s;
+  }
+  main .recommended .book .name-book {
+    padding: 10px;
+    background-color: #fff;
+    width: 200px;
+    height: 20vh;
+    display: contents;
+  }
+  main .recommended .book .name-book h4 {
+    font-size: 1.1em;
+    color: #34495e;
+    margin: 0;
+  }
+  main .recommended .book .name-book p {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin: 5px 0 0;
+  }
 }
 main .categories {
   padding: 20px;
@@ -205,6 +403,31 @@ main .categories .category-list .self:hover {
 main .categories .category-list .business:hover {
   background-color: #E5E3E4;
 }
+@media (max-width: 1024px) {
+  main .categories {
+    padding: 10px;
+  }
+  main .categories h2 {
+    font-size: 1.5em;
+  }
+  main .categories .category-list {
+    justify-content: center;
+    gap: 20px;
+  }
+  main .categories .category-list .category {
+    width: 80%;
+    max-width: 250px;
+    margin: 10px auto;
+    padding: 15px;
+  }
+  main .categories .category-list .category .list {
+    width: 100%;
+    margin: 0;
+  }
+  main .categories .category-list .category .n-book {
+    font-size: 14px;
+  }
+}
 main section {
   margin-bottom: 20px;
   padding: 20px;
@@ -240,15 +463,19 @@ main .contact-container .grid {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+main .contact-container .grid .contact-form form label {
+  text-align: left;
+  color: rgba(31, 33, 33, 0.9450980392);
+}
 main .contact-container .grid .grid-item {
-  background-color: #ffffff;
-  padding: 20px;
+  background-color: #fff;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 main .contact-container .grid .grid-item h2 {
   font-size: 1.5em;
-  color: #16a085;
+  color: #269B8E;
 }
 main .contact-container .grid .grid-item p {
   margin: 10px 0;
@@ -283,6 +510,41 @@ main .contact-container .grid .grid-item form button {
 }
 main .contact-container .grid .grid-item form button:hover {
   background-color: #16a085;
+}
+@media (max-width: 1024px) {
+  main section {
+    padding: 15px;
+  }
+  main .contact-container {
+    padding: 15px;
+  }
+  main .contact-container h1 {
+    font-size: 1.5em;
+  }
+  main .contact-container p {
+    font-size: 0.9em;
+  }
+  main .contact-container .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  main .contact-container .grid .grid-item {
+    padding: 15px;
+  }
+  main .contact-container .grid .grid-item h2 {
+    font-size: 1.3em;
+  }
+}
+@media (max-width: 600px) {
+  main main section {
+    padding: 10px;
+  }
+  main main section h1 {
+    font-size: 24px;
+  }
+  main main section p {
+    font-size: 16px;
+  }
 }
 
 .book-list .rowling:hover {
@@ -347,4 +609,28 @@ main .contact-container .grid .grid-item form button:hover {
 }
 .footer .footer-container .footer-section ul a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+  .footer-section h3 {
+    font-size: 1.5em;
+  }
+  .footer-section p {
+    font-size: 0.9em;
+  }
+  .footer-section .social-icons {
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .footer-section h3 {
+    font-size: 1em;
+  }
+  .footer-section p {
+    font-size: 0.8em;
+  }
 }/*# sourceMappingURL=home.css.map */
