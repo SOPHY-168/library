@@ -1,8 +1,19 @@
-
 @import"components/__varaible";
-@import"components/__body";
+
+
+body {  
+    font-family: $font-family;  
+    margin: 0;  
+    padding: 0;  
+    background-color: $secondary-color;  
+}  
+@media (max-width: 1024px) {  
+    body {  
+        padding: 5px;  
+    }  
+} 
+
 @import"components/__mylist";
 @import"components/__header";
 @import"components/__main";
 @import"components/__footer";
-
