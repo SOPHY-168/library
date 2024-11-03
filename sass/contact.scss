@@ -1,24 +1,18 @@
 
-@import "components/_viriables";
-@import "components/_container";
-@import "components/_content";
-@import "components/_header";
-@import "components/_footer";
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "./components/_viriables";
+@import "./components/_container";
+@import "./components/_content";
+@import "./components/_header";
+@import "./components/_footer";
+@import"./components/sidebar";
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background-color: #fff;
-  height:auto;
-  // overflow: hidden;
 }
 
-section {
-  margin-top: 20px;
-}
+// section {
+//   margin-top: 20px;
+// }

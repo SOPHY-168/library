@@ -1,0 +1,39 @@
+.sidebar{
+    position: fixed;
+    z-index: 1000;    
+    grid-area: sidebar;
+    background-color: rgba(240, 240, 240, 0);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    height: 770px;
+    img {
+        width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .link {
+        ul {
+            list-style-type: none;
+
+            li {
+                margin: 20px 0;
+                margin-left: -10px;
+                padding: 5px;
+
+                a {
+                    text-decoration: none;
+                    color: #333;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+        a:hover{
+            transform: scale(1.05);
+            width: 130px;
+            border-radius: 5px;
+            text-decoration: underline orangered;
+        }
+    }
+}
