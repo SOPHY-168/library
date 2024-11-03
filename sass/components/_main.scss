@@ -1,14 +1,16 @@
 main{
     grid-area: main;
-    // background-color: white;
+    display: grid;
     margin-top: 10px;
+    width: 85%;
+    margin-left: 17%;
     .mission{
         text-align: center;
         margin-top: -15px;
-    }
-
-    h1{
-        color:#16a085 ;
+        h1{
+            color:#16a085 ;
+            margin: 50px -130px; 
+        }
     }
     .cards{
         display: flex;
@@ -25,7 +27,6 @@ main{
         width: 23vw;
         height: 50vh;
         border-radius: 5px;
-        // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        }
        .card:hover {
@@ -34,31 +35,25 @@ main{
         box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
     }
        .card img{
-        // margin-top: -15px;
-        // margin-left: -17px;
         width: 170px; 
-        height: 210px;
-    
-        // width: 100px;
-        // height: 100px;
-       }
-       .h3s{
-        margin-top: -25px;
+        height: 170px;
        }
        p{
         color: #616a6b;
         text-align: justify;
-        margin-left: 30px;
-        
-
+        padding: 0px 20px;
        }
        h3{
-        margin-top: -15px;
+        margin-top: 5px;
        }
     }
     .value{
         text-align: center;
         margin-top: -15px;
+        h1{
+            margin: 50px 0px;
+            color:#16a085 ;
+        }
     }
     .cardss{
         display: flex;
@@ -74,23 +69,25 @@ main{
             width: 23vw;
             height: 50vh;
             border-radius: 5px;
-            // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
            }
-
            .card:hover {
             background-color: aquamarine;
             transform: scale(1.05);
             box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
-        }
+            }
+            .card img{
+                width: 170px; 
+                height: 170px;
+            }
            p{
             margin-top: 15px;
             color: #616a6b ;
             text-align: justify;
-            padding-left: 50px;
+            padding:0px 20px;
            }
            h3{
-            margin-top: -10px;
+            margin-top: 5px;
            }
            .h3s{
             margin-top:50px;
@@ -99,31 +96,150 @@ main{
     }
 }
 
-// tablet 
-// @media (max-width: 1024px) {
-//     *{
-//         font-size: small;
-//     }
-
-// }
 @media (max-width: 1024px) {
-    .about{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "header"
-          "side-life"
-          "about"
-          "main"
-          "donation-container"
-        "footer";
-    }
     .header,
         .side-life,
         .about,
         main,
         .donation-container,
-        .cards, .cardss {
-            flex-direction: column; // Stack cards vertically on smaller screens
-          }
-        
+        .cards, .cardss{
+            flex-direction: column; 
+        }
+    .mission{
+        .cards{
+            .card{
+                margin: 25px 0px;
+                display: grid;
+                grid-template-columns: 1fr 8fr;
+                grid-template-areas: "img card-title"
+                "img text";
+                width: 70%;
+                height: 150px;
+                align-items: center;
+                
+                h3{
+                    grid-area: card-title;
+                    margin-bottom: -30px;
+                }
+                p{
+                    margin-top: -40px;
+                    margin: 0;
+                    grid-area: text;
+                    text-align: center;
+                    padding: 0px 40px;
+                }
+                img{
+                    grid-area: img;
+                    margin: 0;
+                    width: 150px;
+                    height: 150px;
+                }
+
+            }
+        }
+    }
+    .value{
+        .cardss{
+            .card4{
+                width: 120px;
+                height: 120px;
+            }
+            .card{
+                margin: 25px 0px;
+                display: grid;
+                grid-template-columns: 1fr 8fr;
+                grid-template-areas: "img card-title"
+                "img text";
+                width: 70%;
+                height: 150px;
+                align-items: center;
+                h3{
+                    grid-area: card-title;
+                }
+                p{
+                    margin-top: -40px;
+                    grid-area: text;
+                    text-align: center;
+                    padding: 0px 40px;
+                }
+                img{
+                    grid-area: img;
+                    margin: 0;
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 600px) {
+
+    .header,
+        .side-life,
+        .about,
+        main,
+        .donation-container,
+        .cards, .cardss{
+            flex-direction: column; 
+           
+        }
+    .mission{
+        .cards{
+           .card{
+                height: 350px;
+                grid-template-columns: 1fr;
+                grid-template-areas: "img "
+                "card-title"
+                "text";
+            h3{
+                grid-area: card-title;
+                margin-top: -120px;
+            }
+            p{
+                margin-top: -80px;
+                grid-area: text;
+                font-size: 12px;
+            }
+            img{
+                margin-left: 18%;
+                grid-area: img;
+                text-align: center;
+                width: 200px;
+                height: 200px;
+            }
+
+            }
+        }
+    }
+    .value{
+        .cardss{
+          
+           .card{
+                height: 350px;
+                grid-template-columns: 1fr;
+                grid-template-areas: "img "
+                "card-title"
+                "text";
+            h3{
+                grid-area: card-title;
+                margin-top: -50px;
+            }
+            p{
+                margin-top: -60px;
+                grid-area: text;
+                font-size: 12px;
+            }
+            img{
+                margin-left: 18%;
+                grid-area: img;
+                text-align: center;
+                width: 200px;
+                height: 200px;
+            }
+
+            }
+        }
+    }
 }

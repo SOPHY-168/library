@@ -1,10 +1,13 @@
 .side-left {
+  position: fixed;
+  z-index: 1000;
   grid-area: side-left;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  height: 1770px;
 }
 .side-left img {
-  width: 80%;
+  width: 180px;
   margin-bottom: 20px;
 }
 .side-left .link ul {
@@ -13,6 +16,7 @@
 .side-left .link ul li {
   margin: 20px 0;
   margin-left: -10px;
+  padding: 5px;
 }
 .side-left .link ul li a {
   text-decoration: none;
@@ -31,23 +35,41 @@
 }
 
 @media (max-width: 1024px) {
-  .about {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "side-life" "about" "main" "donation-container" "footer";
+  .side-left {
+    width: 120px;
+  }
+  .side-left img {
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .side-left .link ul li {
+    margin-left: -30px;
+    font-size: 12px;
   }
 }
-@media (max-width: 768px) {
-  .header {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "side-life" "about" "main" "donation-container" "footer";
+@media (max-width: 600px) {
+  .side-left {
+    width: 80px;
+    background-color: rgba(255, 255, 255, 0);
   }
-  .side-life img {
-    width: 100%;
+  .side-left img {
+    width: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .side-left .link ul li {
+    margin-left: -40px;
+    font-size: 10px;
+    font-size: 10px;
+  }
+  .side-left .link ul li a {
+    font-size: 8px;
   }
 }
 .header {
   grid-area: header;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 20px;
 }
 .header .fa-solid {
@@ -77,10 +99,10 @@
 @media (max-width: 1024px) {
   .about {
     grid-template-columns: 1fr;
-    grid-template-areas: "header" "side-life" "about" "main" "donation-container" "footer";
+    grid-template-areas: "header" "side-left" "about" "main" "donation-container" "footer";
   }
   .header .fa-solid,
-  .side-life .fa-solid,
+  .side-left .fa-solid,
   .about .fa-solid,
   main .fa-solid,
   .donation-container .fa-solid,
@@ -88,17 +110,27 @@
     right: 90%;
   }
 }
+@media (max-width: 600px) {
+  .header .fa-solid {
+    right: 75%;
+  }
+  .header input {
+    max-width: 340px;
+    padding-left: 10%;
+  }
+}
 .about {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 2.4fr 3fr;
   grid-template-areas: "moon-library photo" "our-story photo";
   width: 100%;
   grid-area: about;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  box-shadow: rgba(0, 0, 0, 0.1490196078) 2.4px 2.4px 3.2px;
 }
 .about .photo img {
   width: 100%;
+  height: 100%;
 }
 .about .moon-library {
   grid-area: moon-library;
@@ -109,10 +141,15 @@
   margin-bottom: -20px;
 }
 .about .moon-library h1 {
+  font-size: 48px;
+  margin-top: -5%;
   text-align: left;
 }
+.about .moon-library h4 {
+  margin-top: -15px;
+  font-weight: 100;
+}
 .about .our-story {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,7 +157,13 @@
   grid-area: our-story;
 }
 .about .our-story h1 {
+  font-size: 48px;
+  margin-top: -100px;
   text-align: left;
+}
+.about .our-story h4 {
+  margin-top: -15px;
+  font-weight: 100;
 }
 .about .photo {
   grid-area: photo;
@@ -132,20 +175,90 @@
 
 @media (max-width: 1024px) {
   .about {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "side-life" "about" "main" "donation-container" "footer";
+    grid-template-areas: "moon-library" "photo" "our-story";
+  }
+  .about .moon-library {
+    padding: 0;
+    margin-top: 30px;
+    margin-left: 22%;
+    width: 100%;
+    grid-area: moon-library;
+    text-align: justify;
+  }
+  .about .moon-library h1 {
+    font-size: 48px;
+    margin-top: 0px;
+    text-align: center;
+  }
+  .about .moon-library h4 {
+    margin-top: -15px;
+    text-align: justify;
+  }
+  .about .our-story {
+    padding: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: 22%;
+    grid-area: our-story;
+  }
+  .about .our-story h1 {
+    font-size: 48px;
+    margin-top: 0px;
+    text-align: center;
+  }
+  .about .our-story h4 {
+    margin-top: -15px;
+    text-align: justify;
+  }
+  .about .photo {
+    width: 100%;
+    margin-left: 22%;
+    grid-area: photo;
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (max-width: 600px) {
+  .about .moon-library {
+    padding: 0;
+    width: 100%;
+    text-align: justify;
+  }
+  .about .moon-library h1 {
+    font-size: 32px;
+  }
+  .about .moon-library h4 {
+    font-weight: 300;
+  }
+  .about .our-story {
+    padding: 0;
+    grid-area: our-story;
+  }
+  .about .our-story h1 {
+    font-size: 32px;
+  }
+  .about .our-story h4 {
+    font-weight: 300;
+  }
+  .about .photo {
+    width: 300px;
+    height: 300px;
   }
 }
 main {
   grid-area: main;
+  display: grid;
   margin-top: 10px;
+  width: 85%;
+  margin-left: 17%;
 }
 main .mission {
   text-align: center;
   margin-top: -15px;
 }
-main h1 {
+main .mission h1 {
   color: #16a085;
+  margin: 50px -130px;
 }
 main .cards {
   display: flex;
@@ -171,22 +284,23 @@ main .cards .card:hover {
 }
 main .cards .card img {
   width: 170px;
-  height: 210px;
-}
-main .cards .h3s {
-  margin-top: -25px;
+  height: 170px;
 }
 main .cards p {
   color: #616a6b;
   text-align: justify;
-  margin-left: 30px;
+  padding: 0px 20px;
 }
 main .cards h3 {
-  margin-top: -15px;
+  margin-top: 5px;
 }
 main .value {
   text-align: center;
   margin-top: -15px;
+}
+main .value h1 {
+  margin: 50px 0px;
+  color: #16a085;
 }
 main .cardss {
   display: flex;
@@ -210,24 +324,24 @@ main .cardss .card:hover {
   transform: scale(1.05);
   box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 6px;
 }
+main .cardss .card img {
+  width: 170px;
+  height: 170px;
+}
 main .cardss p {
   margin-top: 15px;
   color: #616a6b;
   text-align: justify;
-  padding-left: 50px;
+  padding: 0px 20px;
 }
 main .cardss h3 {
-  margin-top: -10px;
+  margin-top: 5px;
 }
 main .cardss .h3s {
   margin-top: 50px;
 }
 
 @media (max-width: 1024px) {
-  .about {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "side-life" "about" "main" "donation-container" "footer";
-  }
   .header,
   .side-life,
   .about,
@@ -236,19 +350,126 @@ main .cardss .h3s {
   .cards, .cardss {
     flex-direction: column;
   }
+  .mission .cards .card {
+    margin: 25px 0px;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-areas: "img card-title" "img text";
+    width: 70%;
+    height: 150px;
+    align-items: center;
+  }
+  .mission .cards .card h3 {
+    grid-area: card-title;
+    margin-bottom: -30px;
+  }
+  .mission .cards .card p {
+    margin-top: -40px;
+    margin: 0;
+    grid-area: text;
+    text-align: center;
+    padding: 0px 40px;
+  }
+  .mission .cards .card img {
+    grid-area: img;
+    margin: 0;
+    width: 150px;
+    height: 150px;
+  }
+  .value .cardss .card4 {
+    width: 120px;
+    height: 120px;
+  }
+  .value .cardss .card {
+    margin: 25px 0px;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-areas: "img card-title" "img text";
+    width: 70%;
+    height: 150px;
+    align-items: center;
+  }
+  .value .cardss .card h3 {
+    grid-area: card-title;
+  }
+  .value .cardss .card p {
+    margin-top: -40px;
+    grid-area: text;
+    text-align: center;
+    padding: 0px 40px;
+  }
+  .value .cardss .card img {
+    grid-area: img;
+    margin: 0;
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .header,
+  .side-life,
+  .about,
+  main,
+  .donation-container,
+  .cards, .cardss {
+    flex-direction: column;
+  }
+  .mission .cards .card {
+    height: 350px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img " "card-title" "text";
+  }
+  .mission .cards .card h3 {
+    grid-area: card-title;
+    margin-top: -120px;
+  }
+  .mission .cards .card p {
+    margin-top: -80px;
+    grid-area: text;
+    font-size: 12px;
+  }
+  .mission .cards .card img {
+    margin-left: 18%;
+    grid-area: img;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+  }
+  .value .cardss .card {
+    height: 350px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img " "card-title" "text";
+  }
+  .value .cardss .card h3 {
+    grid-area: card-title;
+    margin-top: -50px;
+  }
+  .value .cardss .card p {
+    margin-top: -60px;
+    grid-area: text;
+    font-size: 12px;
+  }
+  .value .cardss .card img {
+    margin-left: 18%;
+    grid-area: img;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+  }
 }
 .donation-container {
   margin-top: 20px;
   grid-area: donation-container;
-  width: 75%;
-  margin-left: 10.5%;
+  margin-left: 22%;
+  margin-right: 3%;
+  box-shadow: rgba(0, 0, 0, 0.1490196078) 2.4px 2.4px 3.2px;
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
 }
-.donation-container h2 {
+.donation-container h1 {
   text-align: center;
-  color: #007BFF;
+  color: #16a085;
   margin-bottom: 20px;
 }
 .donation-container .donation-form {
@@ -305,22 +526,34 @@ main .cardss .h3s {
 }
 
 @media (max-width: 1024px) {
-  .about {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "side-life" "about" "main" "donation-container" "footer";
+  .donation-container {
+    margin-right: 11%;
+    margin-left: 29.5%;
+  }
+  .donation-container .donation-form input[type=text],
+  .donation-container .donation-form input[type=email],
+  .donation-container .donation-form input[type=number] {
+    width: 96%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .donation-container {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "side-life" "about" "main" "donation-container" "footer";
+    margin-right: 10.5%;
+    margin-left: 28.5%;
   }
-  .donation-container {
-    width: 90%;
-    margin-left: 5%;
+  .donation-container .donation-form {
+    font-size: 10px;
+  }
+  .donation-container .donation-form input[type=text],
+  .donation-container .donation-form input[type=email],
+  .donation-container .donation-form input[type=number] {
+    width: 96%;
+    font-size: 10px;
   }
 }
 .footer {
+  position: relative;
+  z-index: 1001;
   grid-area: footer;
   background-color: #333;
   color: #fff;
@@ -372,27 +605,24 @@ main .cardss .h3s {
   padding-left: 10px;
 }
 
-@media (max-width: 1024px) {
-  .about {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "side-life" "about" "main" "donation-container" "footer";
-  }
-  .header,
-  .side-life,
-  .about,
-  main,
-  .donation-container,
-  .footer {
-    width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .donation-container {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "side-life" "about" "main" "donation-container" "footer";
-  }
+@media (max-width: 600px) {
   .footer-container {
-    grid-template-columns: 1fr;
+    padding-left: 25%;
+    grid-template-areas: "contact" "location" "pages";
+  }
+  .footer-container .footer-section {
+    margin-left: 25%;
+    width: 120%;
+  }
+  .footer-container .pages {
+    display: none;
+    grid-area: pages;
+  }
+  .footer-container .location {
+    grid-area: location;
+  }
+  .footer-container .contact {
+    grid-area: contact;
   }
 }
 body {
