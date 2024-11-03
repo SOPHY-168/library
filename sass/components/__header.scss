@@ -31,7 +31,10 @@ header {
 header {  
     background-color: $primary-color;  
     color: black;  
-    padding: 30px 20px;  
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     grid-area: header;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
     .logo img {  
@@ -95,18 +98,23 @@ header {
 }    
 @media (max-width: 600px) { 
     header {  
+        padding: 20px;
+        margin: 0;
         .logo img {  
-            height: 50px;  
+            height: auto;  
+            width: 50px;
         } 
-        padding: 10px 5px;
+        // padding: 10px 5px;
         nav{
             ul {  
+                padding: 0;
+                margin: 0;
                 flex-direction: column;
                 gap: 5px;
                 .nav-icon{
                     li{
                         a{
-                            font-size: 10px;
+                            font-size: 8px;
                         }
                     }
                 }

@@ -47,6 +47,9 @@ header {
   background-color: #fff;
   color: black;
   padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   grid-area: header;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
@@ -108,17 +111,21 @@ header nav ul li a {
 }
 @media (max-width: 600px) {
   header {
-    padding: 10px 5px;
+    padding: 20px;
+    margin: 0;
   }
   header .logo img {
-    height: 50px;
+    height: auto;
+    width: 50px;
   }
   header nav ul {
+    padding: 0;
+    margin: 0;
     flex-direction: column;
     gap: 5px;
   }
   header nav ul .nav-icon li a {
-    font-size: 10px;
+    font-size: 8px;
   }
   .input .div-input {
     border-radius: 5px;
@@ -584,55 +591,14 @@ main .contact-container .grid .grid-item form button:hover {
 }
 
 .footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-}
-.footer .footer-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-.footer .footer-container .footer-section h3 {
-  margin-bottom: 10px;
-  font-size: 1.2em;
-}
-.footer .footer-container .footer-section p {
-  margin: 5px 0;
-}
-.footer .footer-container .footer-section .social-icons {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-.footer .footer-container .footer-section a img {
-  width: 24px;
-  height: 24px;
-  border-radius: 20px;
-}
-.footer .footer-container .footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-.footer .footer-container .footer-section ul li {
-  margin: 5px 0;
-}
-.footer .footer-container .footer-section ul a {
-  color: #fff;
-  text-decoration: none;
-}
-.footer .footer-container .footer-section ul a:hover {
-  text-decoration: underline;
-}
-
-.footer {
+  position: relative;
+  z-index: 1001;
   grid-area: footer;
   background-color: #333;
   color: #fff;
   padding: 20px 0;
+  text-align: center;
+  margin-top: 15px;
 }
 .footer .footer-container {
   display: grid;
@@ -651,6 +617,8 @@ main .contact-container .grid .grid-item form button:hover {
 }
 .footer .footer-container .footer-section .social-icons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-top: 10px;
 }
@@ -672,27 +640,27 @@ main .contact-container .grid .grid-item form button:hover {
 .footer .footer-container .footer-section ul a:hover {
   text-decoration: underline;
 }
-
-@media (max-width: 1024px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    padding: 0 10px;
-  }
-  .footer-section h3 {
-    font-size: 1.5em;
-  }
-  .footer-section p {
-    font-size: 0.9em;
-  }
-  .footer-section .social-icons {
-    justify-content: center;
-  }
+.footer .footer-container .footer-section ul .li3 {
+  padding-left: 10px;
 }
+
 @media (max-width: 600px) {
-  .footer-section h3 {
-    font-size: 1em;
+  .footer-container {
+    padding-left: 25%;
+    grid-template-areas: "contact" "location" "pages";
   }
-  .footer-section p {
-    font-size: 0.8em;
+  .footer-container .footer-section {
+    margin-left: 25%;
+    width: 120%;
+  }
+  .footer-container .pages {
+    display: none;
+    grid-area: pages;
+  }
+  .footer-container .location {
+    grid-area: location;
+  }
+  .footer-container .contact {
+    grid-area: contact;
   }
 }/*# sourceMappingURL=home.css.map */
