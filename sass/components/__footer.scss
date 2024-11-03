@@ -56,3 +56,34 @@
         } 
     } 
 }  
+@media (max-width: 1024px) {  
+    .footer-container {  
+        grid-template-columns: 1fr;  
+        padding: 0 10px;  
+    }  
+    
+    .footer-section {  
+        h3 {  
+            font-size: 1.5em;  
+        }  
+        
+        p {  
+            font-size: 0.9em;  
+        }  
+        
+        .social-icons {  
+            justify-content: center;  
+        }  
+    }  
+}  
+@media (max-width: 600px) {   
+    .footer-section {  
+        h3 {  
+            font-size: 1em;  
+        }  
+        
+        p {  
+            font-size: 0.8em;  
+        }      
+    }  
+}  
